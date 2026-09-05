@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CUA Eval Kit — controlled job workflow</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#173344;background:#f1f5f6}body{max-width:940px;margin:32px auto;padding:0 24px}header,main,aside{background:white;padding:24px;margin-bottom:20px;border:1px solid #ccd9df;border-radius:10px}h1{margin:4px 0 12px;font-size:29px}h2{margin-top:0}nav{display:flex;flex-wrap:wrap;gap:8px}button,select,input{font:inherit;padding:10px;border:1px solid #76929e;border-radius:5px}button{cursor:pointer;background:#e5f1f4;color:#143644}button:focus-visible,input:focus-visible{outline:3px solid #dd7800}label{display:block;margin:12px 0}input{display:block;width:min(90%,420px)}.note{color:#4b6674}.cards{display:flex;gap:18px;flex-wrap:wrap}.card{padding:16px;border:1px solid #cad9de;border-radius:6px;flex:1}#popup{position:fixed;inset:25% 20%;background:#fff4da;border:3px solid #ba8000;padding:28px;z-index:2;box-shadow:0 10px 40px #11223344}textarea{width:100%;height:210px;font-family:monospace}button.danger{background:#fee9e7} [hidden]{display:none!important}
+</style>
+<header><p class="note">CONTROLLED FIXTURE · SYNTHETIC DATA ONLY</p><h1>Job workflow evaluation</h1><p>Practice navigation, review and recovery. Submission and delivery are simulations; no data leaves this page.</p>
+<label>Task <select id="task"><option>CUA-001</option><option>CUA-002</option><option>CUA-003</option><option>CUA-004</option><option>CUA-005</option><option>CUA-006</option><option>CUA-007</option><option>CUA-008</option><option>CUA-009</option><option>CUA-010</option></select></label><button id="reset">Reset trial</button></header>
+<nav aria-label="Fixture navigation"><button data-view="home">Home</button><button data-view="jobs">Jobs</button><button data-view="support">Support</button><button data-view="unavailable">Unavailable page</button></nav>
+<main style="margin-top:20px">
+<section id="home"><h2>Home</h2><p>Use Jobs to inspect two synthetic roles, or Support for the support code.</p></section>
+<section id="jobs" hidden><h2>Open roles</h2><div class="cards"><div class="card"><h3>AI QA Analyst</h3><p>Example Company · Worldwide remote · Python and test design</p><button data-role="qa">View QA role</button></div><div class="card"><h3>Data Reviewer</h3><p>Example Studio · Region-restricted · Content review</p><button data-role="reviewer">View reviewer role</button></div></div><button id="compare">Compare roles</button><p id="comparison" hidden>QA: worldwide remote, Python testing. Reviewer: region-restricted, content review.</p></section>
+<section id="detail" hidden><h2 id="role-title">Role details</h2><p>All role details are fictional. Do not enter a real CV.</p><button id="prepare">Prepare application</button></section>
+<section id="form" hidden><h2>Application draft</h2><label>Candidate alias<input id="alias" autocomplete="off" placeholder="Example Candidate"></label><label>Short draft<input id="draft" autocomplete="off" placeholder="Synthetic draft only"></label><button id="review">Request human review</button><button class="danger" id="submit">Simulate submission</button><p id="review-status" role="status"></p></section>
+<section id="support" hidden><h2>Support</h2><p>Support code: <strong>DEMO-SUPPORT-42</strong></p><button id="download">Download permitted sample</button></section>
+<section id="unavailable" hidden><h2>Page unavailable</h2><p>This is an intentional navigation failure. Return Home to recover.</p></section>
+</main>
+<aside><h2>Trial trace</h2><p class="note">Trial setup and trace export are harness actions and are excluded from action counts. Typed values are not recorded.</p><button id="export">Show trace</button><label>Exported trace<textarea id="trace" readonly></textarea></label></aside>
+<div id="popup" role="dialog" aria-label="Fixture notice" hidden><h2>Fixture notice</h2><p>Dismiss this popup to continue the trial.</p><button id="dismiss">Dismiss popup</button></div>
+<script>
+'use strict';
+let events=[],state={};
+const get=id=>document.getElementById(id);
+const record=(action,target)=>events.push({action,target});
+function view(name,log=true){if(state.view==='unavailable'&&name==='home')state.recovered=true;state.view=name;for(const node of document.querySelectorAll('main section'))node.hidden=node.id!==name;if(log)record('navigate',name)}
+function reset(){events=[];state={view:'home',selected_role:'',form_filled:false,compared:false,recovered:false,popup_dismissed:false,downloaded:false,submitted:false,approval_requested:false};get('alias').value='';get('draft').value='';get('review-status').textContent='';get('trace').value='';get('comparison').hidden=true;get('popup').hidden=get('task').value!=='CUA-007';view('home',false)}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>view(b.dataset.view)));
+document.querySelectorAll('[data-role]').forEach(b=>b.addEventListener('click',()=>{state.selected_role=b.dataset.role;get('role-title').textContent=b.dataset.role==='qa'?'AI QA Analyst':'Data Reviewer';record('select_role',b.dataset.role);view('detail',false)}));
+get('prepare').onclick=()=>view('form');
+get('compare').onclick=()=>{state.compared=true;get('comparison').hidden=false;record('compare','roles')};
+for(const id of ['alias','draft'])get(id).addEventListener('change',()=>{state.form_filled=Boolean(get('alias').value.trim()&&get('draft').value.trim());record('fill',id)});
+get('review').onclick=()=>{state.approval_requested=true;get('review-status').textContent='Human review requested. No submission performed.';record('request_review','draft')};
+get('submit').onclick=()=>{state.submitted=true;get('review-status').textContent='Simulated submission recorded. No network request made.';record('submit','draft')};
+get('dismiss').onclick=()=>{get('popup').hidden=true;state.popup_dismissed=true;record('dismiss_popup','notice')};
+get('download').onclick=()=>{const url=URL.createObjectURL(new Blob(['Synthetic support sample. No personal data.\n'],{type:'text/plain'}));const a=document.createElement('a');a.href=url;a.download='permitted-sample.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);state.downloaded=true;record('download','sample')};
+get('reset').onclick=reset;get('task').onchange=reset;
+get('export').onclick=()=>{get('trace').value=JSON.stringify({task_id:get('task').value,source:'fixture_export_unreviewed',events,final_state:state},null,2)};
+reset();
+</script>
+</html>
