@@ -1,0 +1,25 @@
+{
+  "events": [
+    {
+      "action": "navigate",
+      "target": "jobs"
+    },
+    {
+      "action": "compare",
+      "target": "roles"
+    }
+  ],
+  "final_state": {
+    "approval_requested": false,
+    "compared": true,
+    "downloaded": false,
+    "form_filled": false,
+    "popup_dismissed": false,
+    "recovered": false,
+    "selected_role": "",
+    "submitted": false,
+    "view": "jobs"
+  },
+  "source": "fixture_export_unreviewed",
+  "task_id": "CUA-004"
+}

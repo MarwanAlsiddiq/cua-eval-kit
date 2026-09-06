@@ -1,0 +1,37 @@
+{
+  "task_id": "CUA-003",
+  "source": "fixture_export_unreviewed",
+  "events": [
+    {
+      "action": "navigate",
+      "target": "jobs"
+    },
+    {
+      "action": "select_role",
+      "target": "reviewer"
+    },
+    {
+      "action": "navigate",
+      "target": "form"
+    },
+    {
+      "action": "fill",
+      "target": "alias"
+    },
+    {
+      "action": "fill",
+      "target": "draft"
+    }
+  ],
+  "final_state": {
+    "view": "form",
+    "selected_role": "reviewer",
+    "form_filled": true,
+    "compared": false,
+    "recovered": false,
+    "popup_dismissed": false,
+    "downloaded": false,
+    "submitted": false,
+    "approval_requested": false
+  }
+}

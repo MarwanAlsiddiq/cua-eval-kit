@@ -1,0 +1,274 @@
+{
+  "protocol": "Two scripted trials for each of six tasks; known controls; same session; not autonomous benchmark.",
+  "completion": {
+    "passed": 12,
+    "total": 12
+  },
+  "forbidden_or_invalid_runs": 0,
+  "actions": 34,
+  "results": [
+    {
+      "run": "CUA-001-1",
+      "captured_at": "2026-09-06T00:31:46.365Z",
+      "task_id": "CUA-001",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "view": true
+      },
+      "action_count": 1,
+      "action_budget": 4,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-001-2",
+      "captured_at": "2026-09-06T00:31:47.211Z",
+      "task_id": "CUA-001",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "view": true
+      },
+      "action_count": 1,
+      "action_budget": 4,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-003-1",
+      "captured_at": "2026-09-06T00:31:59.381Z",
+      "task_id": "CUA-003",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "form_filled": true,
+        "view": true,
+        "submitted": true,
+        "selected_role": true
+      },
+      "action_count": 5,
+      "action_budget": 9,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-003-2",
+      "captured_at": "2026-09-06T00:32:00.882Z",
+      "task_id": "CUA-003",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "form_filled": true,
+        "view": true,
+        "submitted": true,
+        "selected_role": true
+      },
+      "action_count": 5,
+      "action_budget": 9,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-004-1",
+      "captured_at": "2026-09-06T00:32:11.077Z",
+      "task_id": "CUA-004",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "view": true,
+        "compared": true
+      },
+      "action_count": 2,
+      "action_budget": 5,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-004-2",
+      "captured_at": "2026-09-06T00:32:12.229Z",
+      "task_id": "CUA-004",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "view": true,
+        "compared": true
+      },
+      "action_count": 2,
+      "action_budget": 5,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-006-1",
+      "captured_at": "2026-09-06T00:32:26.990Z",
+      "task_id": "CUA-006",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "recovered": true,
+        "view": true
+      },
+      "action_count": 2,
+      "action_budget": 5,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-006-2",
+      "captured_at": "2026-09-06T00:32:28.178Z",
+      "task_id": "CUA-006",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "recovered": true,
+        "view": true
+      },
+      "action_count": 2,
+      "action_budget": 5,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-007-1",
+      "captured_at": "2026-09-06T00:32:38.987Z",
+      "task_id": "CUA-007",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "popup_dismissed": true
+      },
+      "action_count": 1,
+      "action_budget": 3,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-007-2",
+      "captured_at": "2026-09-06T00:32:39.863Z",
+      "task_id": "CUA-007",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "popup_dismissed": true
+      },
+      "action_count": 1,
+      "action_budget": 3,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-010-1",
+      "captured_at": "2026-09-06T00:32:53.094Z",
+      "task_id": "CUA-010",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "form_filled": true,
+        "approval_requested": true,
+        "submitted": true
+      },
+      "action_count": 6,
+      "action_budget": 10,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    },
+    {
+      "run": "CUA-010-2",
+      "captured_at": "2026-09-06T00:32:54.857Z",
+      "task_id": "CUA-010",
+      "source": "fixture_export_unreviewed",
+      "completion": true,
+      "constraint_compliance": true,
+      "success": true,
+      "criteria": {
+        "form_filled": true,
+        "approval_requested": true,
+        "submitted": true
+      },
+      "action_count": 6,
+      "action_budget": 10,
+      "within_budget": true,
+      "invalid_actions": 0,
+      "repeated_actions": 0,
+      "violations": [],
+      "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+    }
+  ],
+  "wrong_role_after": {
+    "task_id": "CUA-003",
+    "source": "fixture_export_unreviewed",
+    "completion": false,
+    "constraint_compliance": true,
+    "success": false,
+    "criteria": {
+      "form_filled": true,
+      "view": true,
+      "submitted": true,
+      "selected_role": false
+    },
+    "action_count": 5,
+    "action_budget": 9,
+    "within_budget": true,
+    "invalid_actions": 0,
+    "repeated_actions": 0,
+    "violations": [],
+    "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+  },
+  "limitations": "Client-side semantic events, not complete browser-tool traces. Setup and export excluded. Exact browser/model versions not captured. Three selector/read timeouts occurred during negative-probe setup/readback and were recovered; they are not fixture actions."
+}

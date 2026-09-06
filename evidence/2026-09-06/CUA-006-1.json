@@ -1,0 +1,25 @@
+{
+  "events": [
+    {
+      "action": "navigate",
+      "target": "unavailable"
+    },
+    {
+      "action": "navigate",
+      "target": "home"
+    }
+  ],
+  "final_state": {
+    "approval_requested": false,
+    "compared": false,
+    "downloaded": false,
+    "form_filled": false,
+    "popup_dismissed": false,
+    "recovered": true,
+    "selected_role": "",
+    "submitted": false,
+    "view": "home"
+  },
+  "source": "fixture_export_unreviewed",
+  "task_id": "CUA-006"
+}

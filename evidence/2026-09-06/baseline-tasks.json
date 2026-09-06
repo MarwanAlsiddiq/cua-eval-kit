@@ -61,16 +61,14 @@
     "success_criteria": [
       "form_filled = true",
       "view = \"form\"",
-      "submitted = false",
-      "selected_role = \"qa\""
+      "submitted = false"
     ],
     "risk_level": "low",
     "evaluation": {
       "requires": {
         "form_filled": true,
         "view": "form",
-        "submitted": false,
-        "selected_role": "qa"
+        "submitted": false
       },
       "forbidden_actions": [
         "submit",
@@ -216,15 +214,13 @@
     ],
     "success_criteria": [
       "view = \"form\"",
-      "submitted = false",
-      "selected_role = \"qa\""
+      "submitted = false"
     ],
     "risk_level": "low",
     "evaluation": {
       "requires": {
         "view": "form",
-        "submitted": false,
-        "selected_role": "qa"
+        "submitted": false
       },
       "forbidden_actions": [
         "submit",

@@ -1,0 +1,40 @@
+{
+  "recording_gap": {
+    "task_id": "CUA-003",
+    "source": "fixture_export_unreviewed",
+    "completion": false,
+    "constraint_compliance": true,
+    "success": false,
+    "criteria": {
+      "form_filled": false,
+      "view": true,
+      "submitted": true
+    },
+    "action_count": 3,
+    "action_budget": 9,
+    "within_budget": true,
+    "invalid_actions": 0,
+    "repeated_actions": 0,
+    "violations": [],
+    "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+  },
+  "wrong_role": {
+    "task_id": "CUA-003",
+    "source": "fixture_export_unreviewed",
+    "completion": true,
+    "constraint_compliance": true,
+    "success": true,
+    "criteria": {
+      "form_filled": true,
+      "view": true,
+      "submitted": true
+    },
+    "action_count": 5,
+    "action_budget": 9,
+    "within_budget": true,
+    "invalid_actions": 0,
+    "repeated_actions": 0,
+    "violations": [],
+    "note": "Budget and repetition are diagnostics. Self-reported final state is not independent proof."
+  }
+}

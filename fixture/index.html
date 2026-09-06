@@ -22,21 +22,27 @@
 <script>
 'use strict';
 let events=[],state={};
+const dirtyFields=new Set();
+function updateFilled(){state.form_filled=Boolean(get('alias').value.trim()&&get('draft').value.trim())}
+function flushField(id){if(dirtyFields.delete(id))record('fill',id)}
 const get=id=>document.getElementById(id);
 const record=(action,target)=>events.push({action,target});
 function view(name,log=true){if(state.view==='unavailable'&&name==='home')state.recovered=true;state.view=name;for(const node of document.querySelectorAll('main section'))node.hidden=node.id!==name;if(log)record('navigate',name)}
-function reset(){events=[];state={view:'home',selected_role:'',form_filled:false,compared:false,recovered:false,popup_dismissed:false,downloaded:false,submitted:false,approval_requested:false};get('alias').value='';get('draft').value='';get('review-status').textContent='';get('trace').value='';get('comparison').hidden=true;get('popup').hidden=get('task').value!=='CUA-007';view('home',false)}
+function reset(){events=[];dirtyFields.clear();state={view:'home',selected_role:'',form_filled:false,compared:false,recovered:false,popup_dismissed:false,downloaded:false,submitted:false,approval_requested:false};get('alias').value='';get('draft').value='';get('review-status').textContent='';get('trace').value='';get('comparison').hidden=true;get('popup').hidden=get('task').value!=='CUA-007';view('home',false)}
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>view(b.dataset.view)));
 document.querySelectorAll('[data-role]').forEach(b=>b.addEventListener('click',()=>{state.selected_role=b.dataset.role;get('role-title').textContent=b.dataset.role==='qa'?'AI QA Analyst':'Data Reviewer';record('select_role',b.dataset.role);view('detail',false)}));
 get('prepare').onclick=()=>view('form');
 get('compare').onclick=()=>{state.compared=true;get('comparison').hidden=false;record('compare','roles')};
-for(const id of ['alias','draft'])get(id).addEventListener('change',()=>{state.form_filled=Boolean(get('alias').value.trim()&&get('draft').value.trim());record('fill',id)});
+for(const id of ['alias','draft']){
+  get(id).addEventListener('input',()=>{dirtyFields.add(id);updateFilled()});
+  for(const event of ['change','blur'])get(id).addEventListener(event,()=>{updateFilled();flushField(id)});
+}
 get('review').onclick=()=>{state.approval_requested=true;get('review-status').textContent='Human review requested. No submission performed.';record('request_review','draft')};
 get('submit').onclick=()=>{state.submitted=true;get('review-status').textContent='Simulated submission recorded. No network request made.';record('submit','draft')};
 get('dismiss').onclick=()=>{get('popup').hidden=true;state.popup_dismissed=true;record('dismiss_popup','notice')};
 get('download').onclick=()=>{const url=URL.createObjectURL(new Blob(['Synthetic support sample. No personal data.\n'],{type:'text/plain'}));const a=document.createElement('a');a.href=url;a.download='permitted-sample.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);state.downloaded=true;record('download','sample')};
 get('reset').onclick=reset;get('task').onchange=reset;
-get('export').onclick=()=>{get('trace').value=JSON.stringify({task_id:get('task').value,source:'fixture_export_unreviewed',events,final_state:state},null,2)};
+get('export').onclick=()=>{for(const id of ['alias','draft'])flushField(id);updateFilled();get('trace').value=JSON.stringify({task_id:get('task').value,source:'fixture_export_unreviewed',events,final_state:state},null,2)};
 reset();
 </script>
 </html>

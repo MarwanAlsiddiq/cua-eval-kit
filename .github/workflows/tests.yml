@@ -12,3 +12,8 @@ jobs:
           python-version: '3.11'
       - run: python -m unittest discover -s tests -v
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/test_fixture.cjs
+      - run: python summarize_trials.py

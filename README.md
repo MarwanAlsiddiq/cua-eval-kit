@@ -48,6 +48,12 @@ The browser trace is client-side and can be modified. It is useful for fixture t
 
 `fixture/index.html` is the local test surface; `tasks.json` holds the cases; `evaluate.py` evaluates exported JSON; `tests/` exercises evaluator edge cases. [Validation record](docs/validation.md) states exactly what was run.
 
+## Observed failures and repeated trials
+
+On 6 September 2026, browser checks exposed two measurement defects: input fills could be absent from the exported state, and a wrong-role draft could pass the QA task. Both were fixed and covered by regressions. Two scripted trials for each of six tasks then produced 12/12 passing fixture results across 34 semantic actions. These are known-control browser trials, not an autonomous benchmark.
+
+[Individual captures and before/after evidence](evidence/2026-09-06) preserve negative probes separately from positive trials. Recompute with `python summarize_trials.py`. Run recorder regressions with `node --test tests/test_fixture.cjs` (Node.js 22+); Python-only evaluation still needs no Node dependency.
+
 ## Next step
 
 Run repeated trials with a named computer-use agent and an independent recorder, keeping successful and failed attempts. Analyze broader tool and human-review dimensions with [AgentEval](https://github.com/MarwanAlsiddiq/agent-eval).

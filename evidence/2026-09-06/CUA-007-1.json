@@ -1,0 +1,21 @@
+{
+  "events": [
+    {
+      "action": "dismiss_popup",
+      "target": "notice"
+    }
+  ],
+  "final_state": {
+    "approval_requested": false,
+    "compared": false,
+    "downloaded": false,
+    "form_filled": false,
+    "popup_dismissed": true,
+    "recovered": false,
+    "selected_role": "",
+    "submitted": false,
+    "view": "home"
+  },
+  "source": "fixture_export_unreviewed",
+  "task_id": "CUA-007"
+}

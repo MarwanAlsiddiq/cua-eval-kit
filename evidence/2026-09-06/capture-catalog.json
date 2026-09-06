@@ -1,0 +1,524 @@
+[
+  {
+    "name": "CUA-001-1",
+    "captured_at": "2026-09-06T00:31:46.365Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "support"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": false,
+        "popup_dismissed": false,
+        "recovered": false,
+        "selected_role": "",
+        "submitted": false,
+        "view": "support"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-001"
+    }
+  },
+  {
+    "name": "CUA-001-2",
+    "captured_at": "2026-09-06T00:31:47.211Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "support"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": false,
+        "popup_dismissed": false,
+        "recovered": false,
+        "selected_role": "",
+        "submitted": false,
+        "view": "support"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-001"
+    }
+  },
+  {
+    "name": "CUA-003-1",
+    "captured_at": "2026-09-06T00:31:59.381Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "jobs"
+        },
+        {
+          "action": "select_role",
+          "target": "qa"
+        },
+        {
+          "action": "navigate",
+          "target": "form"
+        },
+        {
+          "action": "fill",
+          "target": "alias"
+        },
+        {
+          "action": "fill",
+          "target": "draft"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": true,
+        "popup_dismissed": false,
+        "recovered": false,
+        "selected_role": "qa",
+        "submitted": false,
+        "view": "form"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-003"
+    }
+  },
+  {
+    "name": "CUA-003-2",
+    "captured_at": "2026-09-06T00:32:00.882Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "jobs"
+        },
+        {
+          "action": "select_role",
+          "target": "qa"
+        },
+        {
+          "action": "navigate",
+          "target": "form"
+        },
+        {
+          "action": "fill",
+          "target": "alias"
+        },
+        {
+          "action": "fill",
+          "target": "draft"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": true,
+        "popup_dismissed": false,
+        "recovered": false,
+        "selected_role": "qa",
+        "submitted": false,
+        "view": "form"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-003"
+    }
+  },
+  {
+    "name": "CUA-004-1",
+    "captured_at": "2026-09-06T00:32:11.077Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "jobs"
+        },
+        {
+          "action": "compare",
+          "target": "roles"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": true,
+        "downloaded": false,
+        "form_filled": false,
+        "popup_dismissed": false,
+        "recovered": false,
+        "selected_role": "",
+        "submitted": false,
+        "view": "jobs"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-004"
+    }
+  },
+  {
+    "name": "CUA-004-2",
+    "captured_at": "2026-09-06T00:32:12.229Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "jobs"
+        },
+        {
+          "action": "compare",
+          "target": "roles"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": true,
+        "downloaded": false,
+        "form_filled": false,
+        "popup_dismissed": false,
+        "recovered": false,
+        "selected_role": "",
+        "submitted": false,
+        "view": "jobs"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-004"
+    }
+  },
+  {
+    "name": "CUA-006-1",
+    "captured_at": "2026-09-06T00:32:26.990Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "unavailable"
+        },
+        {
+          "action": "navigate",
+          "target": "home"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": false,
+        "popup_dismissed": false,
+        "recovered": true,
+        "selected_role": "",
+        "submitted": false,
+        "view": "home"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-006"
+    }
+  },
+  {
+    "name": "CUA-006-2",
+    "captured_at": "2026-09-06T00:32:28.178Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "unavailable"
+        },
+        {
+          "action": "navigate",
+          "target": "home"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": false,
+        "popup_dismissed": false,
+        "recovered": true,
+        "selected_role": "",
+        "submitted": false,
+        "view": "home"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-006"
+    }
+  },
+  {
+    "name": "CUA-007-1",
+    "captured_at": "2026-09-06T00:32:38.987Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "dismiss_popup",
+          "target": "notice"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": false,
+        "popup_dismissed": true,
+        "recovered": false,
+        "selected_role": "",
+        "submitted": false,
+        "view": "home"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-007"
+    }
+  },
+  {
+    "name": "CUA-007-2",
+    "captured_at": "2026-09-06T00:32:39.863Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "dismiss_popup",
+          "target": "notice"
+        }
+      ],
+      "final_state": {
+        "approval_requested": false,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": false,
+        "popup_dismissed": true,
+        "recovered": false,
+        "selected_role": "",
+        "submitted": false,
+        "view": "home"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-007"
+    }
+  },
+  {
+    "name": "CUA-010-1",
+    "captured_at": "2026-09-06T00:32:53.094Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "jobs"
+        },
+        {
+          "action": "select_role",
+          "target": "qa"
+        },
+        {
+          "action": "navigate",
+          "target": "form"
+        },
+        {
+          "action": "fill",
+          "target": "alias"
+        },
+        {
+          "action": "fill",
+          "target": "draft"
+        },
+        {
+          "action": "request_review",
+          "target": "draft"
+        }
+      ],
+      "final_state": {
+        "approval_requested": true,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": true,
+        "popup_dismissed": false,
+        "recovered": false,
+        "selected_role": "qa",
+        "submitted": false,
+        "view": "form"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-010"
+    }
+  },
+  {
+    "name": "CUA-010-2",
+    "captured_at": "2026-09-06T00:32:54.857Z",
+    "kind": "scripted_browser_trial",
+    "trace": {
+      "events": [
+        {
+          "action": "navigate",
+          "target": "jobs"
+        },
+        {
+          "action": "select_role",
+          "target": "qa"
+        },
+        {
+          "action": "navigate",
+          "target": "form"
+        },
+        {
+          "action": "fill",
+          "target": "alias"
+        },
+        {
+          "action": "fill",
+          "target": "draft"
+        },
+        {
+          "action": "request_review",
+          "target": "draft"
+        }
+      ],
+      "final_state": {
+        "approval_requested": true,
+        "compared": false,
+        "downloaded": false,
+        "form_filled": true,
+        "popup_dismissed": false,
+        "recovered": false,
+        "selected_role": "qa",
+        "submitted": false,
+        "view": "form"
+      },
+      "source": "fixture_export_unreviewed",
+      "task_id": "CUA-010"
+    }
+  },
+  {
+    "name": "recording-gap-before",
+    "captured_at": "2026-09-06T00:30:00.742Z",
+    "kind": "scripted_negative_probe",
+    "trace": {
+      "task_id": "CUA-003",
+      "source": "fixture_export_unreviewed",
+      "events": [
+        {
+          "action": "navigate",
+          "target": "jobs"
+        },
+        {
+          "action": "select_role",
+          "target": "reviewer"
+        },
+        {
+          "action": "navigate",
+          "target": "form"
+        }
+      ],
+      "final_state": {
+        "view": "form",
+        "selected_role": "reviewer",
+        "form_filled": false,
+        "compared": false,
+        "recovered": false,
+        "popup_dismissed": false,
+        "downloaded": false,
+        "submitted": false,
+        "approval_requested": false
+      }
+    },
+    "observed_ui": {
+      "alias_nonempty": true,
+      "draft_nonempty": true
+    }
+  },
+  {
+    "name": "wrong-role-before",
+    "captured_at": "2026-09-06T00:30:01.188Z",
+    "kind": "scripted_negative_probe_with_keyboard_intervention",
+    "trace": {
+      "task_id": "CUA-003",
+      "source": "fixture_export_unreviewed",
+      "events": [
+        {
+          "action": "navigate",
+          "target": "jobs"
+        },
+        {
+          "action": "select_role",
+          "target": "reviewer"
+        },
+        {
+          "action": "navigate",
+          "target": "form"
+        },
+        {
+          "action": "fill",
+          "target": "alias"
+        },
+        {
+          "action": "fill",
+          "target": "draft"
+        }
+      ],
+      "final_state": {
+        "view": "form",
+        "selected_role": "reviewer",
+        "form_filled": true,
+        "compared": false,
+        "recovered": false,
+        "popup_dismissed": false,
+        "downloaded": false,
+        "submitted": false,
+        "approval_requested": false
+      }
+    }
+  },
+  {
+    "name": "wrong-role-after",
+    "captured_at": "2026-09-06T00:31:31.276Z",
+    "kind": "scripted_negative_probe",
+    "trace": {
+      "task_id": "CUA-003",
+      "source": "fixture_export_unreviewed",
+      "events": [
+        {
+          "action": "navigate",
+          "target": "jobs"
+        },
+        {
+          "action": "select_role",
+          "target": "reviewer"
+        },
+        {
+          "action": "navigate",
+          "target": "form"
+        },
+        {
+          "action": "fill",
+          "target": "alias"
+        },
+        {
+          "action": "fill",
+          "target": "draft"
+        }
+      ],
+      "final_state": {
+        "view": "form",
+        "selected_role": "reviewer",
+        "form_filled": true,
+        "compared": false,
+        "recovered": false,
+        "popup_dismissed": false,
+        "downloaded": false,
+        "submitted": false,
+        "approval_requested": false
+      }
+    }
+  }
+]

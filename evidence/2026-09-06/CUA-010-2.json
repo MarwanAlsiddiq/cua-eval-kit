@@ -1,0 +1,41 @@
+{
+  "events": [
+    {
+      "action": "navigate",
+      "target": "jobs"
+    },
+    {
+      "action": "select_role",
+      "target": "qa"
+    },
+    {
+      "action": "navigate",
+      "target": "form"
+    },
+    {
+      "action": "fill",
+      "target": "alias"
+    },
+    {
+      "action": "fill",
+      "target": "draft"
+    },
+    {
+      "action": "request_review",
+      "target": "draft"
+    }
+  ],
+  "final_state": {
+    "approval_requested": true,
+    "compared": false,
+    "downloaded": false,
+    "form_filled": true,
+    "popup_dismissed": false,
+    "recovered": false,
+    "selected_role": "qa",
+    "submitted": false,
+    "view": "form"
+  },
+  "source": "fixture_export_unreviewed",
+  "task_id": "CUA-010"
+}

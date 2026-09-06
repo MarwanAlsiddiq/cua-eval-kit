@@ -1,0 +1,21 @@
+{
+  "events": [
+    {
+      "action": "navigate",
+      "target": "support"
+    }
+  ],
+  "final_state": {
+    "approval_requested": false,
+    "compared": false,
+    "downloaded": false,
+    "form_filled": false,
+    "popup_dismissed": false,
+    "recovered": false,
+    "selected_role": "",
+    "submitted": false,
+    "view": "support"
+  },
+  "source": "fixture_export_unreviewed",
+  "task_id": "CUA-001"
+}
